@@ -654,7 +654,7 @@ function initProductDetails() {
     },
     'caneta-lyme': {
       folder: 'caneta metal lyme',
-      colors: ['preta', 'prata'],
+      colors: ['branca', 'silver'],
       angles: 3,
       description: 'Caneta metálica Lyme com visual limpo e executivo. Acabamento metalizado de alta qualidade com detalhes cromados. Ideal para brindes corporativos de alto padrão.',
       material: 'Alumínio',

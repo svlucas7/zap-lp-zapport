@@ -1,62 +1,64 @@
-﻿![Preview](docs/preview.png)
+﻿![Preview](docs/preview.avif)
 
+# ZapPort  Landing page de catálogo de brindes
 
-Este repositório faz parte do meu portfólio no GitHub. É uma landing page de Academico desenvolvida profissionalmente (no contexto do meu trabalho) e publicada aqui para demonstrar meu processo, padrões e qualidade de entrega.
+Este repositório contém a landing page utilizada pela ZapPort para apresentar produtos promocionais (canetas, copos térmicos, squeezes etc.), gerar orçamentos rápidos e facilitar contato comercial via WhatsApp.
 
-- Tipo: Landing Page estática focada em conversão
-- Tom: portfólio profissional (mostrando boas práticas e organização)
+## Objetivos
 
+- Catálogo leve e responsivo focado em conversão e geração de leads.
+- Galerias por produto com imagens por ângulo e seleção por cor.
+- Formulário de orçamento com validações de quantidade mínima e mensagem pré-preenchida para WhatsApp.
 
+## Tecnologias
 
-## ✨ Visão geral
+- HTML semântico + Tailwind CSS
+- JavaScript (vanilla) em `public/main.js`
+- Imagens otimizadas em AVIF em `public/assets/images`
 
-- Seção hero com proposta de valor clara e CTA destacado
-- Blocos de benefícios, prova social e FAQ para reduzir objeções
-- Estrutura leve, responsiva e otimizada para velocidade
-- Pronto para integrar ferramentas de marketing (pixel, tag manager, forms)
+## Estrutura
 
-## 🛠️ Tecnologias e padrões
+- `index.html`  página principal
+- `public/`  assets públicos (scripts, imagens, estilos gerados)
+- `src/input.css`  entrada do Tailwind
+- `public/main.js`  interação: modais, galeria e geração de mensagem
+- `docs/preview.avif`  imagem de preview usada no GitHub
 
-- HTML semântico e Tailwind CSS (utilitários e componetização leve)
-- JavaScript vanilla para interações pontuais (sem dependências pesadas)
-- Assets otimizados (imagens com lazy loading quando aplicável)
-- Configuração opcional de deploy via Netlify ou GitHub Pages
+## Rodando localmente
 
-## 📁 Estrutura do projeto
+1. Instale dependências e rode o watch do Tailwind (opcional):
 
-- index.html — entrada única com layout e seções da LP
-- public/ — imagens e assets estáticos
-- src/ — arquivos fonte (quando aplicável)
-- 	ailwind.config.js e postcss.config.js  configuração de estilo (quando presente)
-- 
-etlify.toml  configuração de deploy (quando usado)
+```bash
+npm install
+npm run dev
+```
 
-##  Como rodar localmente
+2. Visualização rápida (sem Tailwind watch):
 
-Windows PowerShell:
-
-`powershell
-# Abrir no navegador (visualização simples)
-Start-Process .\index.html
-
-# ou servir em HTTP local (recomendado para testar lazy loading)
+```bash
 python -m http.server 8000
-# Acesse: http://localhost:8000
-`
+# abra http://localhost:8000
+```
 
-## 🚀 Deploy
+3. Build de produção dos estilos:
 
-- Netlify: arrastar a pasta do projeto ou conectar o repositório e configurar build (se usar Tailwind)
-- GitHub Pages: habilitar Pages na branch main e apontar a raiz do projeto
+```bash
+npm run build
+```
 
-## 📌 Notas de design/conteúdo
+## Atualizar preview
 
-- Copywriting pensado para Academico, com foco em clareza e escaneabilidade
-- Componentes reutilizáveis, tokens de espaçamento e tipografia consistentes
-- Preparado para testes A/B (variações de heading/CTA/ordem de blocos)
+Para gerar/atualizar o preview do repositório copie uma imagem representativa para `docs/preview.avif`. Exemplo (já executado neste commit): copiar `public/assets/images/zapport_1.avif`  `docs/preview.avif`.
 
-## 🧑‍💻 Sobre este projeto
+## Deploy
 
-Este trabalho foi desenvolvido no contexto da empresa em que atuo, e publicado aqui como parte do meu portfólio. Meu objetivo é mostrar como estruturo LPs de nicho com foco em conversão, performance e manutenção simples.
+- GitHub Pages ou Netlify (configurar build: `npm run build` se usar Tailwind)
 
- Lucas (@svlucas7)
+## Observações
+
+- Alguns arquivos PSD e `Thumbs.db` foram incluídos por comodidade; recomendo limpar o histórico e adicionar entradas adequadas ao `.gitignore` se desejar manter o repositório enxuto.
+- Atualize `public/main.js` ao adicionar novas pastas de imagens para que as galerias funcionem corretamente.
+
+---
+
+Maintainer: Lucas Silva (@svlucas7)
